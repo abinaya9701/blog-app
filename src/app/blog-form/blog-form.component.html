@@ -1,0 +1,12 @@
+<p>blog-form works!</p>
+<form [formGroup]="blogForm" (ngSubmit)="onSubmit()">
+    <input formControlName="title" placeholder="Title" required>
+    <textarea formControlName="content" placeholder="Content" required></textarea>
+    <input formControlName="author" placeholder="Author" required>
+    <select formControlName="category" required>
+      <option value="">Select Category</option>
+      <option *ngFor="let cat of categories" [value]="cat">{{ cat }}</option>
+    </select>
+    <button type="submit" [disabled]="blogForm.invalid">Add Post</button>
+  </form>
+  

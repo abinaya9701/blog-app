@@ -1,0 +1,11 @@
+<div *ngIf="post" class="post-detail">
+    <h2>{{ post.title }}</h2>
+    <p><strong>Author:</strong> {{ post.author }}</p>
+    <p><strong>Date:</strong> {{ post.date | date }}</p>
+    <p><strong>Category:</strong> {{ post.category }}</p>
+    <hr>
+    <p>{{ post.content }}</p>
+  </div>
+  
+  <a routerLink="/">Back to Posts</a>
+  

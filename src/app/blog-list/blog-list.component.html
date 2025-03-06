@@ -1,0 +1,13 @@
+<div>
+    <select [(ngModel)]="selectedCategory" (change)="filterPosts()">
+      <option value="">All Categories</option>
+      <option *ngFor="let category of blogService.getCategories()" [value]="category">{{ category }}</option>
+    </select>
+  
+    <div *ngFor="let post of filteredPosts">
+      <h3>{{ post.title }}</h3>
+      <p>{{ post.author }} - {{ post.category }} - {{ post.date | date }}</p>
+      <a [routerLink]="['/post', post.id]">Read More</a>
+    </div>
+  </div>
+  
