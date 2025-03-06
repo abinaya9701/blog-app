@@ -16,7 +16,7 @@ export class BlogService {
   private blogPosts = new BehaviorSubject<BlogPost[]>([
     {
       title: 'First Post',
-      content: 'This is the content of the first post.',
+      content: 'This is the content of the first post.xyz123',
       author: 'Admin',
       date: new Date(),
       category: 'General'
